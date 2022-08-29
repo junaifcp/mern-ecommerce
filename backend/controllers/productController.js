@@ -42,7 +42,7 @@ exports.deleteProduct=async(req,res)=>{
     await product.remove()
     res.status(200).json({success:true,message:"Product has been deleted successfully"})
 }
-//get product details
+//get product details 
 exports.getProductDetails=async(req,res,next)=>{
     let product=await Product.findById(req.params.id)
     if(!product){
